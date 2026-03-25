@@ -1,0 +1,43 @@
+# ─── EmotiScan · requirements.txt ───────────────────────────────────────────
+# Instalar con:  pip install -r requirements.txt
+#
+# ⚠️  NOTA DE COMPATIBILIDAD KERAS/TENSORFLOW
+# ─────────────────────────────────────────────────────────────────────────────
+# Desde TF 2.16, Keras 3 es el backend por defecto.
+# DeepFace fue construido sobre Keras 2 (API legacy).
+# Solución oficial: instalar tf-keras (puerto de Keras 2) junto a TF ≥ 2.16.
+#
+# Combinación probada y estable:
+#   tensorflow  == 2.18.0
+#   tf-keras    == 2.18.0   ← debe coincidir con la versión de TF
+#
+# Referencias:
+#   https://github.com/serengil/deepface/issues/1121
+#   https://github.com/serengil/deepface/issues/1323
+
+# ── Deep learning backend ────────────────────────────────────────────────────
+tensorflow==2.18.0
+
+# Keras 2 legacy API — OBLIGATORIO para TF ≥ 2.16 con DeepFace
+# La versión DEBE coincidir con la de TensorFlow instalado.
+tf-keras==2.18.0
+
+# ── Detección de emociones faciales ─────────────────────────────────────────
+deepface==0.0.93
+
+# ── Procesamiento de imágenes ────────────────────────────────────────────────
+opencv-python==4.10.0.84
+
+# NumPy: TF 2.18 requiere NumPy 2.x; usamos el rango compatible
+numpy>=2.0.0,<2.2.0
+
+# ── Interfaz gráfica ─────────────────────────────────────────────────────────
+Pillow>=10.0.0
+
+# ── Utilidades internas de DeepFace ─────────────────────────────────────────
+retina-face>=0.0.17
+mtcnn>=0.1.1
+gdown>=4.7.1
+tqdm>=4.65.0
+requests>=2.28.0
+pandas>=1.5.0

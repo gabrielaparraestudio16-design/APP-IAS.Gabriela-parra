@@ -1,0 +1,6 @@
+
+deepface
+tensorflow==2.18.0
+tf-keras
+pillow
+opencv-python

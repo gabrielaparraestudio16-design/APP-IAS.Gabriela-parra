@@ -1,0 +1,21 @@
+# ──────────────────────────────────────────────────────────────
+# FaceEmotion Analyzer – dependencias
+# Instalar con:  pip install -r requirements.txt
+# ──────────────────────────────────────────────────────────────
+
+# Motor de detección de emociones faciales
+deepface==0.0.93
+
+# Backend de deep learning (TensorFlow)
+# Si usas Python 3.12+ instala tf-keras por separado:
+#   pip install tf-keras
+tensorflow==2.18.0
+
+# Visión por computadora (OpenCV sin módulos GUI extra)
+opencv-python-headless==4.10.0.84
+
+# Manipulación de imágenes para Tkinter
+Pillow==11.1.0
+
+# Álgebra lineal (requerido por DeepFace internamente)
+numpy>=1.24,<2.0
